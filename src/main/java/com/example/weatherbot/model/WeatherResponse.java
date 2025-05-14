@@ -1,10 +1,12 @@
+// WeatherResponse.java
 package com.example.weatherbot.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
-
 import java.util.List;
 
+// Модель для парсинга JSON-ответа от OpenWeather
 @Getter
 @Setter
 public class WeatherResponse {
@@ -16,7 +18,8 @@ public class WeatherResponse {
     @Setter
     public static class Main {
         private double temp;
-        private double feels_like;
+        @JsonProperty("feels_like")
+        private double feelsLike;
         private int humidity;
     }
 
