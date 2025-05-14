@@ -8,8 +8,7 @@ import org.springframework.context.annotation.Configuration;
 @Getter
 @Setter
 @Configuration
-@ConfigurationProperties(prefix = "bot")
-public class BotConfig {
-    private String name;
-    private String token;
+@ConfigurationProperties(prefix = "weather")
+public class WeatherConfig {
+    private String apiKey;
 }
